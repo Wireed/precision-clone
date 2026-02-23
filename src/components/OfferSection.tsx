@@ -28,9 +28,9 @@ const OfferSection = () => {
         <p className="text-primary-foreground/80 mb-6">Pagamento na entrega — Risco ZERO para você!</p>
 
         <div className="bg-background rounded-2xl p-8 shadow-2xl mb-8">
-          <p className="text-muted-foreground text-sm line-through mb-1">De R$ 197,00</p>
+          <p className="text-muted-foreground text-sm line-through mb-1">De R$ 497,60</p>
           <p className="text-4xl font-black mb-1 text-secondary md:text-6xl">
-            R$ <span className="text-gradient-primary">89,90</span>
+            R$ <span className="text-gradient-primary">119,90</span>
           </p>
           <p className="text-muted-foreground text-sm mb-6">ou 12x de R$ 12,24</p>
 
@@ -52,13 +52,13 @@ const OfferSection = () => {
             className="block bg-gradient-cta text-primary-foreground px-8 py-5 rounded-full text-xl font-black shadow-cta hover:opacity-95 transition-all animate-pulse-slow" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
 
             CONCLUIR COMPRA AGORA
+   
+   
           </a>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-          { icon: ShieldCheck, text: "Compra Protegida" },
-          { icon: Truck, text: "Frete Grátis" },
+          {[{ icon: ShieldCheck, text: "Compra Protegida" }, { icon: Truck, text: "Frete Grátis" },
           { icon: RotateCcw, text: "30 Dias de Garantia" },
           { icon: Lock, text: "100% Criptografado" }].
           map(({ icon: Icon, text }) =>
