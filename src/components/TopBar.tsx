@@ -42,7 +42,7 @@ const TopBar = () => {
         </div>
         <a className="flex items-center gap-1.5 bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs font-bold hover:opacity-90 transition-opacity" href="https://wa.me/5537998272175?text=Quero%20agendar%20a%20Joelheira%20Ortop%C3%A9dica%20Premium%20e%20pagar%20s%C3%B3%20na%20entrega!" target="_blank" rel="noopener noreferrer">
           <ShoppingCart className="w-3.5 h-3.5" />
-          Fazer meu pedido
+          Fazer meu pedido no whatsapp
         </a>
       </div>
     </div>);
