@@ -1,15 +1,37 @@
-import { Star } from "lucide-react";
+import { useEffect, useState, useCallback } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
-  { name: "Maria S.", text: "Incrível! Em poucos dias já senti uma melhora enorme na dor do meu joelho. Recomendo demais!", stars: 5 },
-  { name: "João P.", text: "Tinha medo de comprar pela internet, mas o pagamento na entrega me deu segurança. Produto de qualidade!", stars: 5 },
-  { name: "Ana L.", text: "Uso diariamente para caminhar e a diferença é absurda. Me sinto 10 anos mais jovem!", stars: 5 },
-  { name: "Carlos M.", text: "Depois da cirurgia no menisco, essa joelheira foi essencial na minha recuperação. Excelente!", stars: 5 },
-  { name: "Fernanda R.", text: "Comprei para minha mãe que sofre de artrose. Ela amou e já pediu outra para o outro joelho!", stars: 5 },
-  { name: "Roberto A.", text: "Frete rápido, produto bem embalado e a qualidade é surpreendente pelo preço. Nota 10!", stars: 4 },
+  { name: "Jackie Goulart", img: "/testimonials/jackie.jpg" },
+  { name: "Feedback WhatsApp", img: "/testimonials/feedback-whatsapp.jpg" },
+  { name: "Rai Vasques", img: "/testimonials/rai.jpg" },
+  { name: "Pol Agostinho", img: "/testimonials/pol.jpg" },
+  { name: "Bia Belchior", img: "/testimonials/bia.jpg" },
+  { name: "Grazi Peixoto", img: "/testimonials/grazi.jpg" },
+  { name: "Jaqueline das Neves", img: "/testimonials/jaque.jpg" },
+  { name: "Vi Almada", img: "/testimonials/viviane.jpg" },
 ];
 
 const TestimonialsSection = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start", slidesToScroll: 1 },
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+  );
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi, onSelect]);
+
   return (
     <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-6xl text-center">
@@ -17,23 +39,38 @@ const TestimonialsSection = () => {
           Mais de <span className="text-gradient-primary">15.000</span> pessoas ajudadas!
         </h2>
         <p className="text-muted-foreground mb-10">Veja o que nossos clientes dizem</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div
-              key={i}
-              className="bg-card border border-border rounded-xl p-6 text-left hover:shadow-lg transition-shadow"
-            >
-              <div className="flex gap-0.5 mb-3">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star
-                    key={j}
-                    className={`w-4 h-4 ${j < t.stars ? "text-amber-400 fill-amber-400" : "text-border"}`}
+
+        <div className="overflow-hidden" ref={emblaRef}>
+          <div className="flex">
+            {testimonials.map((t, i) => (
+              <div
+                key={i}
+                className="flex-[0_0_80%] sm:flex-[0_0_45%] lg:flex-[0_0_30%] min-w-0 px-2"
+              >
+                <div className="bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                  <img
+                    src={t.img}
+                    alt={`Depoimento de ${t.name}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
                   />
-                ))}
+                </div>
               </div>
-              <p className="text-foreground text-sm mb-4">"{t.text}"</p>
-              <p className="text-muted-foreground text-xs font-semibold">— {t.name}</p>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-6">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => emblaApi?.scrollTo(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === selectedIndex ? "bg-primary" : "bg-border"
+              }`}
+              aria-label={`Ir para depoimento ${i + 1}`}
+            />
           ))}
         </div>
       </div>
