@@ -9,9 +9,9 @@ const TopBar = () => {
     const interval = setInterval(() => {
       setTime((prev) => {
         let { h, m, s } = prev;
-        if (s > 0) s--;
-        else if (m > 0) { m--; s = 59; }
-        else if (h > 0) { h--; m = 59; s = 59; }
+        if (s > 0) s--;else
+        if (m > 0) {m--;s = 59;} else
+        if (h > 0) {h--;m = 59;s = 59;}
         return { h, m, s };
       });
     }, 1000);
@@ -40,13 +40,13 @@ const TopBar = () => {
             Expira em {pad(time.h)}:{pad(time.m)}:{pad(time.s)}
           </span>
         </div>
-        <a href="#oferta" className="flex items-center gap-1.5 bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs font-bold hover:opacity-90 transition-opacity">
+        <a className="flex items-center gap-1.5 bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-xs font-bold hover:opacity-90 transition-opacity" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
           <ShoppingCart className="w-3.5 h-3.5" />
           Fazer meu pedido
         </a>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default TopBar;
