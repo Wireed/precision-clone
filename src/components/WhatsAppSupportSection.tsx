@@ -31,7 +31,7 @@ const WhatsAppSupportSection = () => {
             </div>
 
             <a
-              href="https://wa.me/5534999999999?text=Olá! Tenho interesse na Joelheira OrtoPro"
+              href="https://wa.me/5537998272175?text=Quero%20agendar%20a%20Joelheira%20Ortop%C3%A9dica%20Premium%20e%20pagar%20s%C3%B3%20na%20entrega!"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[hsl(142,70%,45%)] text-white px-8 py-4 rounded-full text-lg font-bold hover:opacity-90 transition-all shadow-cta"

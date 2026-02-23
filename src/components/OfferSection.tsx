@@ -49,7 +49,7 @@ const OfferSection = () => {
 
           <a
 
-            className="block bg-gradient-cta text-primary-foreground px-8 py-5 rounded-full text-xl font-black shadow-cta hover:opacity-95 transition-all animate-pulse-slow" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
+            className="block bg-gradient-cta text-primary-foreground px-8 py-5 rounded-full text-xl font-black shadow-cta hover:opacity-95 transition-all animate-pulse-slow" href="https://wa.me/5537998272175?text=Quero%20agendar%20a%20Joelheira%20Ortop%C3%A9dica%20Premium%20e%20pagar%20s%C3%B3%20na%20entrega!" target="_blank" rel="noopener noreferrer">
 
             CONCLUIR COMPRA AGORA
    

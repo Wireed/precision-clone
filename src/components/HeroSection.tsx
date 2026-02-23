@@ -22,13 +22,13 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <a
 
-                className="bg-gradient-cta text-primary-foreground px-8 py-4 rounded-full text-lg font-bold shadow-cta hover:opacity-95 transition-all text-center animate-pulse-slow" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
+                className="bg-gradient-cta text-primary-foreground px-8 py-4 rounded-full text-lg font-bold shadow-cta hover:opacity-95 transition-all text-center animate-pulse-slow" href="https://wa.me/5537998272175?text=Quero%20agendar%20a%20Joelheira%20Ortop%C3%A9dica%20Premium%20e%20pagar%20s%C3%B3%20na%20entrega!" target="_blank" rel="noopener noreferrer">
 
                 QUERO ALÍVIO IMEDIATO
               </a>
               <a
 
-                className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-primary hover:text-primary-foreground transition-all text-center" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
+                className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-primary hover:text-primary-foreground transition-all text-center" href="https://wa.me/5537998272175?text=Quero%20agendar%20a%20Joelheira%20Ortop%C3%A9dica%20Premium%20e%20pagar%20s%C3%B3%20na%20entrega!" target="_blank" rel="noopener noreferrer">
 
                 Quero pagar na entrega
               </a>
