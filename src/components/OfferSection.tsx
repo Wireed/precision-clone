@@ -48,8 +48,8 @@ const OfferSection = () => {
           </div>
 
           <a
-            href="#"
-            className="block bg-gradient-cta text-primary-foreground px-8 py-5 rounded-full text-xl font-black shadow-cta hover:opacity-95 transition-all animate-pulse-slow">
+
+            className="block bg-gradient-cta text-primary-foreground px-8 py-5 rounded-full text-xl font-black shadow-cta hover:opacity-95 transition-all animate-pulse-slow" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
 
             CONCLUIR COMPRA AGORA
           </a>

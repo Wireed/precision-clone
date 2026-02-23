@@ -21,15 +21,15 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <a
-                href="#oferta"
-                className="bg-gradient-cta text-primary-foreground px-8 py-4 rounded-full text-lg font-bold shadow-cta hover:opacity-95 transition-all text-center animate-pulse-slow"
-              >
+
+                className="bg-gradient-cta text-primary-foreground px-8 py-4 rounded-full text-lg font-bold shadow-cta hover:opacity-95 transition-all text-center animate-pulse-slow" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
+
                 QUERO ALÍVIO IMEDIATO
               </a>
               <a
-                href="#oferta"
-                className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-primary hover:text-primary-foreground transition-all text-center"
-              >
+
+                className="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-bold hover:bg-primary hover:text-primary-foreground transition-all text-center" href="https://entrega.logzz.com.br/pay/memxo8o0m/hbxto-joelheira-ortopedica---01-unidade">
+
                 Quero pagar na entrega
               </a>
             </div>
@@ -49,8 +49,8 @@ const HeroSection = () => {
               <img
                 src={heroProduct}
                 alt="Joelheira Ortopédica OrtoPro"
-                className="w-72 md:w-96 drop-shadow-2xl animate-bounce-gentle"
-              />
+                className="w-72 md:w-96 drop-shadow-2xl animate-bounce-gentle" />
+
               <div className="absolute -bottom-2 -right-2 bg-danger text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
                 Restam apenas 23 unidades!
               </div>
@@ -58,8 +58,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
