@@ -14,7 +14,7 @@ const WhatsAppSupportSection = () => {
               Tire suas dúvidas pelo <span className="text-[hsl(142,70%,40%)]">WhatsApp</span>
             </h2>
             <p className="text-muted-foreground mb-5">
-              Nossa equipe de especialistas está pronta para te atender. Converse agora e receba orientação personalizada sobre a joelheira ideal para você.
+              Nossa equipe de especialistas está pronta para te atender. Converse agora e receba orientação sobre como funciona.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
