@@ -47,9 +47,9 @@ const HeroSection = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative">
               <img
-                src={heroProduct}
+
                 alt="Joelheira Ortopédica OrtoPro"
-                className="w-72 md:w-96 drop-shadow-2xl animate-bounce-gentle" />
+                className="w-72 md:w-96 drop-shadow-2xl animate-bounce-gentle" src="/lovable-uploads/4125836d-b8ee-488b-a1ba-b50625bef686.webp" />
 
               <div className="absolute -bottom-2 -right-2 bg-danger text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
                 Restam apenas 23 unidades!
